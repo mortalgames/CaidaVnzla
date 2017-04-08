@@ -25,4 +25,14 @@ def ronda(mano):
 			return True
 	return False
 
-print(ronda(ronda_mano))
+# print(ronda(ronda_mano))
+
+trivilin_mano = [9, 9, 9]
+
+def trivilin(mano):
+	for numero in mano:
+		if mano.count(numero) == 3:
+			return True
+	return False
+
+# print(trivilin(trivilin_mano))

@@ -29,7 +29,7 @@ def ronda(mano):
 			return True
 	return False
 
-# print(ronda(ronda_mano))
+print(ronda(ronda_mano))
 
 #TRIVILIN
 

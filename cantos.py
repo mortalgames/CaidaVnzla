@@ -1,3 +1,5 @@
+#CASA GRANDE
+
 casa_grande = [12, 1, 12]
 
 def casaGrande(mano):
@@ -7,6 +9,8 @@ def casaGrande(mano):
 	return False
 
 # print(casaGrande(casa_grande))
+
+#RONDA
 
 ronda_mano = [10, 3, 10]
 
@@ -27,6 +31,8 @@ def ronda(mano):
 
 # print(ronda(ronda_mano))
 
+#TRIVILIN
+
 trivilin_mano = [9, 9, 9]
 
 def trivilin(mano):
@@ -36,3 +42,22 @@ def trivilin(mano):
 	return False
 
 # print(trivilin(trivilin_mano))
+
+#VIGIA
+
+vigia_mano = [9, 10, 10]
+
+def vigia(mano):
+	for cartas in mano:
+		if mano.count(cartas) == 2:
+			iguales= mano.pop(mano.index(cartas))
+			vigia_mano.remove(iguales)
+			residuo= vigia_mano.pop()
+			if residuo + 1 == iguales:
+				print("Esto es vigia mayor")
+			elif residuo - 1 == iguales:
+				print("Esto es vigia menor")
+			return True
+	return False
+
+# print(vigia(vigia_mano))
